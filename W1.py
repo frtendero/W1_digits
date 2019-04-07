@@ -160,8 +160,7 @@ Also, for minkowski, a parameter 'p' can be adjusted, so the different values wi
 """
 param_grid = {'n_neighbors': [1, 3, 5, 7, 9, 11, 13],
               'weights': ['uniform', 'distance'],
-              'metric': ['euclidean', 'manhattan', 'minkowski'],
-              'p': [2, 3, 4, 5, 6, 7, 8, 9]}
+              'p': [1, 2, 3, 4, 5, 6, 7, 8, 9]}
 
 myGSCV_m = GridSearchCV(estimator=myKNN, param_grid=param_grid, scoring='accuracy',
                         cv=StratifiedKFold(n_splits=10, random_state=3))
